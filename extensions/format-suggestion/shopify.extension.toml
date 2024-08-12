@@ -14,15 +14,15 @@ type = "ui_extension"
 # and the file that contains your extension’s source code. Learn more:
 # https://shopify.dev/docs/api/checkout-ui-extensions/unstable/extension-targets-overview
 
-# [START address-autocomplete.config-ext-target]
 [[extensions.targeting]]
 module = "./src/suggest.js"
 target = "purchase.address-autocomplete.suggest"
-# [END address-autocomplete.config-ext-target]
+
+# [START format-suggestion.config-ext-target]
 [[extensions.targeting]]
 module = "./src/format-suggestion.js"
 target = "purchase.address-autocomplete.format-suggestion"
-
+# [END format-suggestion.config-ext-target]
 [extensions.capabilities]
 # Gives your extension access to make external network calls, using the
 # JavaScript `fetch()` API. Learn more:

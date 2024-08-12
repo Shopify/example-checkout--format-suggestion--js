@@ -1,26 +1,29 @@
+// [START format-suggestion.ext-target]
 import {extension} from '@shopify/ui-extensions/checkout';
 
 export default  extension(
   'purchase.address-autocomplete.format-suggestion',
   async ({target}) => {
-    // 1. Use the suggestion the buyer selected
+// [END format-suggestion.ext-target]
 
+// [START format-suggestion.attribute]
     const {selectedSuggestion} = target;
+// [END format-suggestion.attribute]
 
-    // 2. Fetch the address parts to format the address
-
+// [START format-suggestion.fetch]
     const response = await fetchSuggestions();
 
     const {result} = await response.json();
 
     const formattedAddress = result.suggestions.find(({global_address_key}) => global_address_key === selectedSuggestion.id)
 
-    // 3. Return a formatted address
-
     return formattedAddress;
+// [END format-suggestion.fetch]
   },
 );
 
+// [START format-suggestion.fetch]
 async function fetchSuggestions() {
     return fetch(`https://shopify.github.io/address-autocomplete/format-suggestion.json`)
 }
+// [END format-suggestion.fetch]
