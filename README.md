@@ -1,3 +1,5 @@
+> **This repository is no longer maintained.** It has been archived and receives no updates or security fixes. Use [example-checkout--format-suggestion--preact](https://github.com/Shopify/example-checkout--format-suggestion--preact) instead.
+
 # Shopify app example: format address suggestions extension
 
 This repo contains an example app that uses [checkout UI extensions](https://shopify.dev/docs/api/checkout-ui-extensions) to Format your address suggestions using JavaScript.
